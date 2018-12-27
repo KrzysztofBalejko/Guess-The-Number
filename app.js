@@ -17,11 +17,20 @@ maxNum.textContent = max;
 guessBtn.addEventListener('click', function(){
   let guess = parseInt(guessInput.value);
   if(isNaN(guess) || guess < min || guess > max) {
-     setMessage(`Please enter a number between ${min} and ${max}`);
+     setMessage(`Please enter a number between ${min} and ${max}`, 'red');
+  }
+     // Winning
+  if (guess === winningNum) {
+    guessInput.disabled = true;
+    guessInput.style.borderColor = 'green';
+    setMessage(`${winningNum} is correct!`, 'green');
+  } else {
+    // Losing
+
   }
 });
 
-function setMessage(msg){
-  message.style.color = 'red';
+function setMessage(msg, color){
+  message.style.color = color;
   message.textContent = msg;
 }
