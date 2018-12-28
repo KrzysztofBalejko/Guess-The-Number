@@ -1,6 +1,12 @@
 # Guess The Number
 
-* TBA
+Super simple number guesser.
+
+* Try to guess the number between 1 - 10.
+
+* There are only 3 guesses.
+ 
+* Don't worry, you can play again!
 
 
 **Language: native JavaScript (no JQuery)**
